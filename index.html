@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA WEB DESDE CERO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #0000ff;
+        }
+        
+        .contenedor {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+        }
+        
+        .sidebar {
+            width: 235px;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+    width: 60px; /* Reduje el tamaño */
+    margin-bottom: 20px; /* Ajusté el margen */
+}
+        
+        .navegacion {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .nav-item {
+            display: block;
+            background-color: #b36dff;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item:hover {
+            background-color: #9a4dff;
+            transform: scale(1.05);
+        }
+        
+        .main-content {
+            flex: 1;
+            position: relative;
+        }
+        
+        .menu-superior {
+            display: flex;
+            background-color: #0000ff;
+            padding: 10px 20px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            text-decoration: underline;
+        }
+        
+        .contenido {
+            display: flex;
+            padding: 20px;
+        }
+        
+        .texto-contenido {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+            min-height: 300px;
+        }
+        
+        .imagen-contenido {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .imagen-contenido img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .btn-leer {
+            display: inline-block;
+            background-color: #b36dff;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-leer:hover {
+            background-color: #9a4dff;
+            transform: scale(1.05);
+        }
+        
+        @media screen and (max-width: 992px) {
+            .contenedor {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                padding: 10px;
+            }
+            
+            .contenido {
+                flex-direction: column;
+            }
+            
+            .texto-contenido {
+                clip-path: none;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="sidebar">
+            <img class="Logo" src="images/Logo.png" alt="Logo Computadora">
+            <div class="navegacion">
+                <a href="#" class="nav-item">INICIO</a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="menu-superior">
+                <a href="https://chifuchi.github.io/paginaweb0/" class="menu-item">PAGINA 1</a>
+                <a href="https://chifuchi.github.io/paginaminimalista/" class="menu-item">PAGINA 2</a>
+                <a href="https://chifuchi.github.io/pagina-web-con-boostrap/" class="menu-item">PAGINA 3</a>
+                <a href="https://chifuchi.github.io/pagina-web-minimalista/" class="menu-item">PAGINA 4</a>
+                <a href="https://chifuchi.github.io/localhost/" class="menu-item">LOCALHOST</a>
+                <a href="curriculum/index.html" class="menu-item">CURRICULUM</a>
+            </div>
+            
+            <div class="contenido">
+                <div class="texto-contenido">
+                    <h1>Pagina inicial</h1>
+                    <p>Esta pagina es el inicio, sirve para poder dirigirse a las otras paginas hechas.</p>
+                    <a href="#" class="btn-leer">Leer Más</a>
+                </div>
+                
+                <div class="imagen-contenido">
+                    <img src="images/iamge.png" alt="Hombre con laptop">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

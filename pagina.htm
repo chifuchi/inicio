@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Página con doble superior</title>
+</head>
+
+<!-- Frame 1 = menú global / Frame 2 = encabezado / Frame 3 = lateral + contenido -->
+<frameset rows="80,100,*"> <!-- Altura del menú y del encabezado -->
+
+    <!-- Menú superior con enlaces -->
+    <frame name="menu_global" src="menu_superior.html" scrolling="no" noresize>
+
+    <!-- Encabezado original -->
+    <frame name="alto" src="./Index_files/guida_frame_1_top.html">
+
+    <!-- Zona inferior: menú lateral + contenido -->
+    <frameset cols="150,*"> 
+        <frame name="sx" src="./Index_files/menu.html">
+        <frame name="centrale" src="./Index_files/guida_frame_1_central.html">
+    </frameset>
+
+</frameset>
+
+<!-- Fallback para navegadores que no soportan frames -->
+<noframes>
+    <body>
+        <p>Tu navegador no soporta frames. <a href="menu_superior.html">Haz clic aquí para continuar</a>.</p>
+    </body>
+</noframes>
+
+</html>
